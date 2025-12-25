@@ -18,7 +18,7 @@ const __dirname = path.resolve();
 
 if (process.env.NODE_ENV == "production"){
     app.use(express.static(path.join(__dirname, "frontend/dist")))
-    app.get("*", (req, res)=>{
+    app.get("/", (req, res)=>{
         res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"))
     })
 }
@@ -27,11 +27,11 @@ if (process.env.NODE_ENV == "production"){
 connectDB()
 .then(()=>{
     console.log("Database is Connected")
-    app.listen(3000, ()=>{
+    app.listen(PORT, ()=>{
         console.log("Server is Started")
     })
 
 })
 .catch((err)=>{
-    console.log("Database Connection is Failed")
+    console.log("Database Connection is Failed", err)
 })

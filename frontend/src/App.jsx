@@ -4,7 +4,6 @@ import { MdModeEditOutline } from "react-icons/md";
 import { MdOutlineDone } from "react-icons/md";
 import { FaTrash } from "react-icons/fa6";
 import {IoClose} from "react-icons/io5"
-import { IoClipboardOutline } from "react-icons/io5";
 
 
 function App() {
