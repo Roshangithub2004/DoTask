@@ -41,7 +41,7 @@ router.patch('/:id', async(req, res)=>{
             todo.completed = req.body.completed
         }
         const updateTodo = await todo.save()
-        res.send(updateTodo)
+        res.json(updateTodo)
 
     }
     catch{
